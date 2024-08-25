@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Cono cono = new Cono(3,5);
+            Console.WriteLine(cono.GetInfo());
         }
     }
 }
