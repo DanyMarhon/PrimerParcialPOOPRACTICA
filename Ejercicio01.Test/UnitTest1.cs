@@ -44,6 +44,6 @@ public class PiramideCuadradaTests
         double volumenActual = piramide.GetVolumen();
 
         // Assert
-        Assert.AreEqual(volumenCorrecto, volumenActual, 1e-5);
+         Assert.AreEqual(volumenCorrecto, volumenActual, 1e-5);
     }
 }

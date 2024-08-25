@@ -28,14 +28,20 @@
             return $"{Valor}";
         }
 
-        public static bool operator == (NumeroArmstrong a1, NumeroArmstrong a2)
+        public static bool operator ==(NumeroArmstrong a1, NumeroArmstrong a2)
         {
+            if (ReferenceEquals(a1, a2)) // Si ambos son el mismo objeto o ambos son null
+                return true;
+
+            if (a1 is null || a2 is null) // Si uno es null y el otro no
+                return false;
+
             return a1.Valor == a2.Valor;
         }
 
-        public static bool operator != (NumeroArmstrong a1, NumeroArmstrong a2)
+        public static bool operator !=(NumeroArmstrong a1, NumeroArmstrong a2)
         {
-            return !(a1.Valor == a2.Valor);
+            return !(a1 == a2); // Utiliza la sobrecarga de ==
         }
 
         public override bool Equals(object? obj)

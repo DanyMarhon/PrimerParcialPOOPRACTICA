@@ -1,5 +1,4 @@
-﻿using Ejercicio04.Datos;
-using Ejercicio04.Entidades;
+﻿using Ejercicio04.Entidades;
 
 namespace Ejercicio04.Consola
 {
@@ -7,18 +6,18 @@ namespace Ejercicio04.Consola
     {
         static void Main(string[] args)
         {
-            RepositorioNumeros repositorio = new RepositorioNumeros();
+            RepositorioNumerosArmstrong repositorio = new RepositorioNumerosArmstrong();
 
             while (true)
             {
-                Console.WriteLine("Menú:");
-                Console.WriteLine("1. Agregar Número Armstrong");
-                Console.WriteLine("2. Quitar Número Armstrong");
-                Console.WriteLine("3. Mostrar Números");
-                Console.WriteLine("4. Buscar Número Armstrong");
-                Console.WriteLine("5. Mostrar Suma de Números Armstrong");
-                Console.WriteLine("6. Salir");
-                Console.Write("Seleccione una opción: ");
+                Console.WriteLine("\n Menú:");
+                Console.WriteLine("\t1. Agregar Número Armstrong");
+                Console.WriteLine("\t2. Quitar Número Armstrong");
+                Console.WriteLine("\t3. Mostrar Números");
+                Console.WriteLine("\t4. Buscar Número Armstrong");
+                Console.WriteLine("\t5. Mostrar Suma de Números Armstrong");
+                Console.WriteLine("\t6. Salir \n");
+                Console.Write("\n Seleccione una opción: ");
                 string opcion = Console.ReadLine();
 
                 switch (opcion)
@@ -28,7 +27,7 @@ namespace Ejercicio04.Consola
                         if (int.TryParse(Console.ReadLine(), out int valor))
                         {
                             NumeroArmstrong numero = new NumeroArmstrong(valor);
-                            var (agregado, mensaje) = repositorio.Agregar(numero);
+                            var (agregado, mensaje) = repositorio.AgregarNumero(numero);
                             Console.WriteLine(mensaje);
                         }
                         else
@@ -42,7 +41,7 @@ namespace Ejercicio04.Consola
                         if (int.TryParse(Console.ReadLine(), out valor))
                         {
                             NumeroArmstrong numero = new NumeroArmstrong(valor);
-                            var (quitado, mensaje) = repositorio.Quitar(numero);
+                            var (quitado, mensaje) = repositorio.QuitarNumero(numero);
                             Console.WriteLine(mensaje);
                         }
                         else
@@ -52,7 +51,7 @@ namespace Ejercicio04.Consola
                         break;
 
                     case "3":
-                        Console.WriteLine(repositorio.MostrarNumeros());
+                        Console.WriteLine(repositorio.ObtenerTodosLosNumeros());
                         break;
 
                     case "4":
@@ -60,7 +59,7 @@ namespace Ejercicio04.Consola
                         if (int.TryParse(Console.ReadLine(), out valor))
                         {
                             NumeroArmstrong numero = new NumeroArmstrong(valor);
-                            var (encontrado, posicion) = repositorio.EncontrarNúmero(numero);
+                            var (encontrado, posicion) = repositorio.ContieneNumero(numero);
                             if (encontrado)
                             {
                                 Console.WriteLine($"Número encontrado en la posición {posicion}.");

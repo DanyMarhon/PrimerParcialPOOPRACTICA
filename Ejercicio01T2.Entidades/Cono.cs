@@ -13,7 +13,6 @@
             }
             _radio = radio;
             _altura = altura;
-            GetGeneratriz();
         }
 
         public double GetGeneratriz()=> Math.Sqrt(Math.Pow(_altura, 2) + Math.Pow(_radio, 2));
