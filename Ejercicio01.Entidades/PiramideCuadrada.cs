@@ -20,7 +20,7 @@ namespace Ejercicio01.Entidades
             GetApotema();
         }
 
-        private double GetApotema()=> Math.Sqrt(Math.Pow(_lado / 2.0, 2) + Math.Pow(_altura, 2));
+        public double GetApotema()=> Math.Sqrt(Math.Pow(_lado / 2.0, 2) + Math.Pow(_altura, 2));
 
         public double GetAreaTotal()=> Math.Pow(_lado, 2) + 2 * _lado * GetApotema();
 

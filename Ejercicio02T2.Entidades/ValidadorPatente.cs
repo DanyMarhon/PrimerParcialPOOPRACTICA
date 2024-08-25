@@ -19,7 +19,7 @@ namespace Ejercicio02T2.Entidades
             return (Regex.IsMatch(patente, ValidadorPatente.formato1) || Regex.IsMatch(patente, formato2)); 
         }
 
-        private static string InformarPatente(string patente)
+        public static string InformarPatente(string patente)
         {
             
             if (Regex.IsMatch(patente, formato1)) return $"La patente {patente} {messageVieja}";
