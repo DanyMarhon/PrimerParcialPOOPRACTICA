@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ejercicio01T2.Entidades\Ejercicio01T2.Entidades.csproj" />
+    <ProjectReference Include="..\PrimerParcialPOO2024Tema1.Shared\PrimerParcialPOO2024Tema1.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
